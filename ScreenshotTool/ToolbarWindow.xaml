@@ -1,0 +1,44 @@
+﻿<Window x:Class="ScreenshotTool.ToolbarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        MouseDown="Toolbar_MouseDown">
+        
+        <Border Background="#F5F5F5" CornerRadius="10" Padding="8, 4"
+                BorderBrush="#CCCCCC" BorderThickness="1">
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="BtnSave" Click="BtnSave_Click" Margin="4,0"
+                        Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                        ToolTip="保存到本地">
+                    <TextBlock FontSize="16">💾</TextBlock>
+                </Button>
+                
+                <Button x:Name="BtnCopy" Click="BtnCopy_Click" Margin="4,0"
+                        Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                        ToolTip="复制到剪贴板">
+                    <TextBlock FontSize="16">📋</TextBlock>
+                </Button>
+                
+                <Button x:Name="BtnAnnotate" Click="BtnAnnotate_Click" Margin="4,0"
+                        Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                        ToolTip="标记">
+                    <TextBlock FontSize="16">🖊</TextBlock>
+                </Button>
+                
+                <Button x:Name="BtnPin" Click="BtnPin_Click" Margin="4,0"
+                        Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                        ToolTip="Pin到屏幕">
+                    <TextBlock FontSize="16">📌</TextBlock>
+                </Button>
+            </StackPanel>
+                
+        </Border>
+        
+</Window>
